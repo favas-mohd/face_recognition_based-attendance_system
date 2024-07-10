@@ -1,6 +1,6 @@
-# face_recognition_based-attendance_system
-An automated attendance system using face recognition technology, built with Python and OpenCV, for accurate and efficient attendance tracking. The system features live capture and a user-friendly Flask-based interface.
 # Attendance System using Face Recognition
+
+This is a face recognition-based attendance system developed as a final year project. The system captures images using a webcam, processes them to recognize faces, and records attendance.
 
 ## Features
 
@@ -25,7 +25,7 @@ An automated attendance system using face recognition technology, built with Pyt
 1. Clone the repository:
 
     ```bash
-     git clone https://github.com/favas-mohd/face_recognition_based-attendance_system.git
+    git clone https://github.com/favas-mohd/face_recognition_based-attendance_system.git
     cd face_recognition_based-attendance_system
     ```
 
@@ -35,7 +35,13 @@ An automated attendance system using face recognition technology, built with Pyt
     pip install -r requirements.txt
     ```
 
-3. Download the `shape_predictor_68_face_landmarks.dat` file and place it in the project directory. You can get it from [dlib's model repository](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2).
+3. Download the `shape_predictor_68_face_landmarks.dat` file from the [dlib model repository](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2) and place it in the project directory after extracting the file.
+
+    ```bash
+    wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+    bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
+    mv shape_predictor_68_face_landmarks.dat face_recognition_based-attendance_system/
+    ```
 
 ## Usage
 
@@ -56,11 +62,14 @@ An automated attendance system using face recognition technology, built with Pyt
 ## Project Structure
 
 ```plaintext
-attendance-system/
+face_recognition_based-attendance_system/
 │
-├── main.py                # Main application file
-├── requirements.txt       # List of dependencies
+├── ImagesAttendance/             # Directory to store captured images
+│
+├── main.py                       # Main application file
+│
+├── requirements.txt              # List of dependencies
+│
 ├── shape_predictor_68_face_landmarks.dat  # Face landmarks data file
-├── ImagesAttendance/      # Directory to store captured images
-├── README.md              # Project readme
-└── Other files and directories
+│
+├── README.md                     # Project readme
